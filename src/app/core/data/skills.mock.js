@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SKILLS = void 0;
+exports.SKILLS = [
+    {
+        info: '111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, repellendus.',
+    },
+    {
+        info: '222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, repellendus.',
+    },
+    {
+        info: '333 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, repellendus.',
+    },
+    {
+        info: '444 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, repellendus.',
+    }
+];

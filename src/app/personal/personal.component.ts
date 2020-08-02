@@ -12,8 +12,6 @@ import {ExperienceService} from '../core/services/experience.service';
 export class PersonalComponent implements OnInit {
 
   personal: Array<Personal> = [];
-  // car = 'Audi';
-  // URL = 'https://google.com';
 
   constructor(
     private personalService: PersonalService,
@@ -22,8 +20,4 @@ export class PersonalComponent implements OnInit {
   ngOnInit(): void {
     this.personal = this.personalService.getPersonal();
   }
-
-  // onClick(Event): void {
-  //   console.log(Event);
-  // }
 }
