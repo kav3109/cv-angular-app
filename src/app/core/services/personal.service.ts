@@ -8,7 +8,7 @@ import {PERSONALS} from '../data/personals.mock';
 export class PersonalService {
 
   constructor() {}
-  getPersonal(): Array<Personal> {
+  getPersonal(): Array<Personal>{
     return PERSONALS;
   }
 }
