@@ -2,7 +2,7 @@
   <div class="cv-header" *ngFor="let pers of personal;">
     <img src="{{ pers.photo }}" alt="photo">
     <h1 class="name">{{ pers.name | uppercase }}</h1>
-    <span class="phone">{{ pers.phone }}</span><br />
+    <span class="phone">phone: {{ pers.phone }}</span><br />
     <p class="city">{{ pers.city }}</p>
     <div *ngIf="pers.incomes > 0">
       Annual income: <span>{{ pers.incomes | currency: 'USD': 'symbol-narrow': '1.0' }}</span><br>
@@ -17,16 +17,4 @@
       <span *ngSwitchDefault>Favorite car is absent</span>
     </div>
   </div>
-  <!--<div class="cv-body">-->
-    <!--<div *ngIf="personal.length > 0">-->
-      <!--{{ personal.length }} {{ personal.length === 1 ? 'person':'persons' }}-->
-    <!--</div>-->
-    <!--<div [ngSwitch]="car">-->
-      <!--<p *ngSwitchCase="'Audi'">This is Audi</p>-->
-      <!--<p *ngSwitchCase="'BMW'">This is BMW</p>-->
-      <!--<p *ngSwitchDefault>This is default car</p>-->
-    <!--</div>-->
-    <!--<a [href]="URL" [attr.target]="'_blank'">Google</a>-->
-    <!--<div (click)="onClick($event)">click here</div>-->
-  <!--</div>-->
 </div>
