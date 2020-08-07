@@ -4,10 +4,20 @@
     <h1 class="name">{{ pers.name | uppercase }}</h1>
     <span class="phone">{{ pers.phone }}</span><br />
     <p class="city">{{ pers.city }}</p>
+    <div *ngIf="pers.incomes > 0">
+      Annual income: <span>{{ pers.incomes | currency: 'USD': 'symbol-narrow': '1.0' }}</span><br>
+      Segments of income:
+      <ul *ngIf="pers.segments.length > 0">
+        <li *ngFor="let arr of pers.segments;">{{arr.segment}} - {{ arr.percent/100 | percent: '1.0'}}</li>
+      </ul>
+    </div>
+    <div *ngIf="pers.auto.length > 0" [ngSwitch]="pers.auto">
+      Favorite car:
+      <span *ngSwitchCase="'Mitsubishi'">{{ pers.auto | uppercase }}</span>
+      <span *ngSwitchDefault>Favorite car is absent</span>
+    </div>
   </div>
   <!--<div class="cv-body">-->
-    <!--annual income: {{ 9000000 | currency: 'USD': 'symbol-narrow': '1.0' }}<br />-->
-    <!--percent: {{ .09 | percent: '1.2'}}-->
     <!--<div *ngIf="personal.length > 0">-->
       <!--{{ personal.length }} {{ personal.length === 1 ? 'person':'persons' }}-->
     <!--</div>-->
